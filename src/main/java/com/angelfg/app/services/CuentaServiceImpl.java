@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
-@Service
+//@Service
 public class CuentaServiceImpl implements CuentaService {
 
     private final CuentaRepository cuentaRepository;
@@ -40,8 +40,13 @@ public class CuentaServiceImpl implements CuentaService {
     }
 
     @Override
-    public void transferir(Long numeroCuentaOrigen, Long numeroCuentaDestino, BigDecimal monto) {
-        Banco banco = this.bancoRepository.findById(1L);
+    public void transferir(
+        Long numeroCuentaOrigen,
+        Long numeroCuentaDestino,
+        BigDecimal monto,
+        Long bancoId
+    ) {
+        Banco banco = this.bancoRepository.findById(bancoId);
         int totalTransferencias = banco.getTotalTransferencias();
         banco.setTotalTransferencias(++totalTransferencias);
         this.bancoRepository.update(banco);
