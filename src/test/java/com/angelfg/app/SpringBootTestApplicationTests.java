@@ -1,5 +1,7 @@
 package com.angelfg.app;
 
+import com.angelfg.app.models.Banco;
+import com.angelfg.app.models.Cuenta;
 import com.angelfg.app.repositories.BancoRepository;
 import com.angelfg.app.repositories.CuentaRepository;
 import com.angelfg.app.services.CuentaService;
@@ -46,6 +48,16 @@ class SpringBootTestApplicationTests {
 
 		assertEquals("900", saldoOrigen.toPlainString());
 		assertEquals("2100", saldoDestino.toPlainString());
+
+		int total = service.revisarTotalTransferencias(1L);
+		assertEquals(1, total);
+
+		verify(cuentaRepository, times(3)).findById(1L);
+		verify(cuentaRepository, times(3)).findById(2L);
+		verify(cuentaRepository, times(2)).update(any(Cuenta.class));
+
+		verify(bancoRepository, times(2)).findById(1L);
+		verify(bancoRepository).update(any(Banco.class));
 	}
 
 }
