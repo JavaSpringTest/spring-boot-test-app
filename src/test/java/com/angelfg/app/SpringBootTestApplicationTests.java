@@ -13,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
 
+import static com.angelfg.app.Datos.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
@@ -29,13 +30,22 @@ class SpringBootTestApplicationTests {
 		this.cuentaRepository = mock(CuentaRepository.class);
 		this.bancoRepository = mock(BancoRepository.class);
 		this.service = new CuentaServiceImpl(cuentaRepository, bancoRepository);
+
+		// Las pruebas siempre deben ser unitarias - unicas
+		// Reiniciamos los datos en cada metodo test
+//		Datos.CUENTA_001.setSaldo(new BigDecimal("1000"));
+//		Datos.CUENTA_002.setSaldo(new BigDecimal("2000"));
+//		Datos.BANCO.setTotalTransferencias(0);
+
+
 	}
+
 
 	@Test
 	void contextLoads() {
-		when(cuentaRepository.findById(1L)).thenReturn(Datos.CUENTA_001);
-		when(cuentaRepository.findById(2L)).thenReturn(Datos.CUENTA_002);
-		when(bancoRepository.findById(1L)).thenReturn(Datos.BANCO);
+		when(cuentaRepository.findById(1L)).thenReturn(crearCuenta001());
+		when(cuentaRepository.findById(2L)).thenReturn(crearCuenta002());
+		when(bancoRepository.findById(1L)).thenReturn(crearBanco());
 
 		BigDecimal saldoOrigen = this.service.revisarSaldo(1L);
 		BigDecimal saldoDestino = this.service.revisarSaldo(2L);
@@ -63,9 +73,9 @@ class SpringBootTestApplicationTests {
 
 	@Test
 	void contextLoads2() {
-		when(cuentaRepository.findById(1L)).thenReturn(Datos.CUENTA_001);
-		when(cuentaRepository.findById(2L)).thenReturn(Datos.CUENTA_002);
-		when(bancoRepository.findById(1L)).thenReturn(Datos.BANCO);
+		when(cuentaRepository.findById(1L)).thenReturn(crearCuenta001());
+		when(cuentaRepository.findById(2L)).thenReturn(crearCuenta002());
+		when(bancoRepository.findById(1L)).thenReturn(crearBanco());
 
 		BigDecimal saldoOrigen = this.service.revisarSaldo(1L);
 		BigDecimal saldoDestino = this.service.revisarSaldo(2L);
