@@ -9,6 +9,8 @@ import com.angelfg.app.services.CuentaService;
 import com.angelfg.app.services.CuentaServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.math.BigDecimal;
@@ -20,16 +22,21 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 class SpringBootTestApplicationTests {
 
+	@Mock
 	private CuentaRepository cuentaRepository;
+
+	@Mock
 	private BancoRepository bancoRepository;
 
-	private CuentaService service;
+	// Tiene que tener la implementacion explicita
+	@InjectMocks
+	private CuentaServiceImpl service;
 
 	@BeforeEach
 	void setUp() {
-		this.cuentaRepository = mock(CuentaRepository.class);
-		this.bancoRepository = mock(BancoRepository.class);
-		this.service = new CuentaServiceImpl(cuentaRepository, bancoRepository);
+//		this.cuentaRepository = mock(CuentaRepository.class);
+//		this.bancoRepository = mock(BancoRepository.class);
+//		this.service = new CuentaServiceImpl(cuentaRepository, bancoRepository);
 
 		// Las pruebas siempre deben ser unitarias - unicas
 		// Reiniciamos los datos en cada metodo test
