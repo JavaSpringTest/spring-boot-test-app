@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 
-//@Service
+@Service
 public class CuentaServiceImpl implements CuentaService {
 
     private final CuentaRepository cuentaRepository;

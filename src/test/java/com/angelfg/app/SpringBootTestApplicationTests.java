@@ -6,12 +6,11 @@ import com.angelfg.app.models.Cuenta;
 import com.angelfg.app.repositories.BancoRepository;
 import com.angelfg.app.repositories.CuentaRepository;
 import com.angelfg.app.services.CuentaService;
-import com.angelfg.app.services.CuentaServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.math.BigDecimal;
 
@@ -22,15 +21,16 @@ import static org.mockito.Mockito.*;
 @SpringBootTest
 class SpringBootTestApplicationTests {
 
-	@Mock
+	@MockitoBean
 	private CuentaRepository cuentaRepository;
 
-	@Mock
+	@MockitoBean
 	private BancoRepository bancoRepository;
 
 	// Tiene que tener la implementacion explicita
-	@InjectMocks
-	private CuentaServiceImpl service;
+
+	@Autowired // Para componentes marcados en spring boot y no es necesario la implementacion implicita
+	private CuentaService service;
 
 	@BeforeEach
 	void setUp() {
