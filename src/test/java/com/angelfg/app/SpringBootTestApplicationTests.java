@@ -38,6 +38,14 @@ class SpringBootTestApplicationTests {
 		BigDecimal saldoDestino = this.service.revisarSaldo(2L);
 		assertEquals("1000", saldoOrigen.toPlainString());
 		assertEquals("2000", saldoDestino.toPlainString());
+
+		service.transferir(1L, 2L, new BigDecimal("100"), 1L);
+
+		saldoOrigen = service.revisarSaldo(1L);
+		saldoDestino = service.revisarSaldo(2L);
+
+		assertEquals("900", saldoOrigen.toPlainString());
+		assertEquals("2100", saldoDestino.toPlainString());
 	}
 
 }
