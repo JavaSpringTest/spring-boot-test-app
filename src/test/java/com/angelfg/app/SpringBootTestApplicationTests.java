@@ -36,10 +36,7 @@ class SpringBootTestApplicationTests {
 //		Datos.CUENTA_001.setSaldo(new BigDecimal("1000"));
 //		Datos.CUENTA_002.setSaldo(new BigDecimal("2000"));
 //		Datos.BANCO.setTotalTransferencias(0);
-
-
 	}
-
 
 	@Test
 	void contextLoads() {
@@ -69,6 +66,9 @@ class SpringBootTestApplicationTests {
 
 		verify(bancoRepository, times(2)).findById(1L);
 		verify(bancoRepository).update(any(Banco.class));
+
+		verify(cuentaRepository, times(6)).findById(anyLong());
+		verify(cuentaRepository, never()).findAll();
 	}
 
 	@Test
@@ -101,6 +101,25 @@ class SpringBootTestApplicationTests {
 
 		verify(bancoRepository, times(1)).findById(1L);
 		verify(bancoRepository, never()).update(any(Banco.class));
+
+		verify(cuentaRepository, times(5)).findById(anyLong());
+		verify(cuentaRepository, never()).findAll();
+	}
+
+	@Test
+	void contextLoads3() {
+		when(cuentaRepository.findById(1L)).thenReturn(crearCuenta001());
+
+		Cuenta cuenta1 = service.findById(1L);
+		Cuenta cuenta2 = service.findById(1L);
+
+		// Comprar que sean iguales
+		assertSame(cuenta1, cuenta2);
+		assertTrue(cuenta1 == cuenta2);
+		assertEquals("Luis", cuenta1.getPersona());
+		assertEquals("Luis", cuenta2.getPersona());
+
+		verify(cuentaRepository, times(2)).findById(1L);
 	}
 
 
