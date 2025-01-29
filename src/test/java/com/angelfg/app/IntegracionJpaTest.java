@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
+import java.math.BigDecimal;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -33,7 +34,6 @@ public class IntegracionJpaTest {
         assertEquals("1000.00", cuenta.orElseThrow().getSaldo().toPlainString());
     }
 
-
     @Test
     void testFindByPersonaThrowException() {
         Optional<Cuenta> cuenta = this.cuentaRepository.findByPersona("Rod");
@@ -54,6 +54,25 @@ public class IntegracionJpaTest {
 
         assertFalse(cuentas.isEmpty());
         assertEquals(2, cuentas.size());
+    }
+
+    @Test
+    void testSave() {
+
+        // Given
+        Cuenta cuentaPepe = new Cuenta(null, "Pepe", new BigDecimal("3000"));
+
+        // When
+        Cuenta cuenta = this.cuentaRepository.save(cuentaPepe);
+
+        // Cuenta cuenta = this.cuentaRepository.findByPersona("Pepe").orElseThrow();
+        // Cuenta cuenta = this.cuentaRepository.findById(cuenta.getId()).orElseThrow();
+
+        // Then
+        assertEquals("Pepe", cuenta.getPersona());
+        assertEquals("3000", cuenta.getSaldo().toPlainString());
+        // assertEquals(3, cuenta.getId());
+
     }
 
 }
