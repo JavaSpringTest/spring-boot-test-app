@@ -1,13 +1,20 @@
 package com.angelfg.app.models;
 
 import com.angelfg.app.exceptions.DineroInsuficienteException;
+import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Objects;
 
-public class Cuenta {
+@Entity
+@Table(name = "cuentas")
+public class Cuenta implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
     private String persona;
     private BigDecimal saldo;
 
@@ -68,6 +75,15 @@ public class Cuenta {
     @Override
     public int hashCode() {
         return Objects.hash(id, persona, saldo);
+    }
+
+    @Override
+    public String toString() {
+        return "Cuenta{" +
+                "id=" + id +
+                ", persona='" + persona + '\'' +
+                ", saldo=" + saldo +
+                '}';
     }
 
 }

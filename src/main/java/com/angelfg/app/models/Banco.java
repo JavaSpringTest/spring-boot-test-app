@@ -1,19 +1,29 @@
 package com.angelfg.app.models;
 
+import jakarta.persistence.*;
+
+import java.io.Serializable;
 import java.util.Objects;
 
-public class Banco {
+@Entity
+@Table(name = "bancos")
+public class Banco implements Serializable {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String banco;
+
+    private String nombre;
+
+    @Column(name = "total_transferencias")
     private int totalTransferencias;
 
     public Banco() {
     }
 
-    public Banco(Long id, String banco, int totalTransferencias) {
+    public Banco(Long id, String nombre, int totalTransferencias) {
         this.id = id;
-        this.banco = banco;
+        this.nombre = nombre;
         this.totalTransferencias = totalTransferencias;
     }
 
@@ -25,12 +35,12 @@ public class Banco {
         this.id = id;
     }
 
-    public String getBanco() {
-        return banco;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setBanco(String banco) {
-        this.banco = banco;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public int getTotalTransferencias() {
@@ -45,12 +55,12 @@ public class Banco {
     public boolean equals(Object o) {
         if (o == null || getClass() != o.getClass()) return false;
         Banco banco1 = (Banco) o;
-        return totalTransferencias == banco1.totalTransferencias && Objects.equals(id, banco1.id) && Objects.equals(banco, banco1.banco);
+        return totalTransferencias == banco1.totalTransferencias && Objects.equals(id, banco1.id) && Objects.equals(nombre, banco1.nombre);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, banco, totalTransferencias);
+        return Objects.hash(id, nombre, totalTransferencias);
     }
 
 }

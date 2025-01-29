@@ -8,17 +8,21 @@ import com.angelfg.app.repositories.CuentaRepository;
 import com.angelfg.app.services.CuentaService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 import static com.angelfg.app.Datos.*;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @SpringBootTest
+//@AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.ANY)
 class SpringBootTestApplicationTests {
 
 	@MockitoBean
@@ -69,10 +73,10 @@ class SpringBootTestApplicationTests {
 
 		verify(cuentaRepository, times(3)).findById(1L);
 		verify(cuentaRepository, times(3)).findById(2L);
-		verify(cuentaRepository, times(2)).update(any(Cuenta.class));
+		verify(cuentaRepository, times(2)).save(any(Cuenta.class));
 
 		verify(bancoRepository, times(2)).findById(1L);
-		verify(bancoRepository).update(any(Banco.class));
+		verify(bancoRepository).save(any(Banco.class));
 
 		verify(cuentaRepository, times(6)).findById(anyLong());
 		verify(cuentaRepository, never()).findAll();
@@ -104,10 +108,10 @@ class SpringBootTestApplicationTests {
 
 		verify(cuentaRepository, times(3)).findById(1L);
 		verify(cuentaRepository, times(2)).findById(2L);
-		verify(cuentaRepository, never()).update(any(Cuenta.class));
+		verify(cuentaRepository, never()).save(any(Cuenta.class));
 
 		verify(bancoRepository, times(1)).findById(1L);
-		verify(bancoRepository, never()).update(any(Banco.class));
+		verify(bancoRepository, never()).save(any(Banco.class));
 
 		verify(cuentaRepository, times(5)).findById(anyLong());
 		verify(cuentaRepository, never()).findAll();
