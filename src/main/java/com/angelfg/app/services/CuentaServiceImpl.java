@@ -5,6 +5,7 @@ import com.angelfg.app.models.Cuenta;
 import com.angelfg.app.repositories.BancoRepository;
 import com.angelfg.app.repositories.CuentaRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 
@@ -23,23 +24,27 @@ public class CuentaServiceImpl implements CuentaService {
     }
 
     @Override
+    @Transactional(readOnly = true)
     public Cuenta findById(Long id) {
         return this.cuentaRepository.findById(id).orElseThrow();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public int revisarTotalTransferencias(Long bancoId) {
         Banco banco = this.bancoRepository.findById(bancoId).orElseThrow();
         return banco.getTotalTransferencias();
     }
 
     @Override
+    @Transactional(readOnly = true)
     public BigDecimal revisarSaldo(Long cuentaId) {
         Cuenta cuenta = this.cuentaRepository.findById(cuentaId).orElseThrow();
         return cuenta.getSaldo();
     }
 
     @Override
+    @Transactional
     public void transferir(
         Long numeroCuentaOrigen,
         Long numeroCuentaDestino,
