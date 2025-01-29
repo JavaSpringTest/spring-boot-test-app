@@ -2487,3 +2487,15 @@ Unconditional classes:
 2025-01-29T15:43:41.534-06:00 DEBUG 17136 --- [SpringApplicationShutdownHook] o.h.type.spi.TypeConfiguration$Scope     : Un-scoping TypeConfiguration [org.hibernate.type.spi.TypeConfiguration$Scope@7dd6dd8f] from SessionFactory [org.hibernate.internal.SessionFactoryImpl@5443086a]
 2025-01-29T15:43:41.534-06:00 DEBUG 17136 --- [SpringApplicationShutdownHook] o.h.s.i.AbstractServiceRegistryImpl      : Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
 2025-01-29T15:43:41.536-06:00 DEBUG 17136 --- [SpringApplicationShutdownHook] o.h.b.r.i.BootstrapServiceRegistryImpl   : Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2025-01-29T15:45:17.356-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-29T15:45:17.493-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-29T15:45:17.503-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-29T15:45:18.663-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
+2025-01-29T15:45:18.721-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-29T15:45:18.740-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-29T15:45:18.758-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-29T15:45:18.763-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-29T15:45:18.773-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
+2025-01-29T15:45:18.774-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-29T15:45:18.779-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
+2025-01-29T15:45:18.784-06:00 DEBUG 33180 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
