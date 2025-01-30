@@ -46,6 +46,7 @@
 			<!--Falla por que es de tipo test al momento de ejecutar el proyecto de java-->
 <!--			<scope>test</scope>-->
 <!--			<scope>test</scope>-->
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>
