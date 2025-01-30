@@ -13,3 +13,57 @@
 2025-01-30T09:41:47.313-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
 2025-01-30T09:41:47.319-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
 2025-01-30T09:41:47.326-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-30T10:43:50.127-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T10:43:50.395-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T10:43:50.406-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T10:43:51.664-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T10:43:51.669-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T10:43:51.674-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T10:43:52.755-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
+2025-01-30T10:43:52.821-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-30T10:43:52.849-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-30T10:43:52.878-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-30T10:43:52.882-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-30T10:43:52.900-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
+2025-01-30T10:43:52.902-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-30T10:43:52.908-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
+2025-01-30T10:43:52.914-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-30T10:54:45.434-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T10:54:45.712-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T10:54:45.722-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T10:54:47.169-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T10:54:47.174-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T10:54:47.178-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T10:54:48.317-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
+2025-01-30T10:54:48.390-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-30T10:54:48.417-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-30T10:54:48.445-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-30T10:54:48.451-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-30T10:54:48.471-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
+2025-01-30T10:54:48.473-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-30T10:54:48.480-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
+2025-01-30T10:54:48.486-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-30T10:58:53.305-06:00 DEBUG 34680 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T10:58:53.434-06:00 DEBUG 34680 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T10:58:53.442-06:00 DEBUG 34680 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T10:59:15.749-06:00 DEBUG 19656 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T10:59:15.885-06:00 DEBUG 19656 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T10:59:15.893-06:00 DEBUG 19656 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T10:59:45.190-06:00 DEBUG 34776 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T10:59:45.321-06:00 DEBUG 34776 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T10:59:45.329-06:00 DEBUG 34776 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T11:00:08.665-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T11:00:08.924-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T11:00:08.934-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T11:00:10.230-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-30T11:00:10.236-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-30T11:00:10.240-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-30T11:00:11.337-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
+2025-01-30T11:00:11.407-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-30T11:00:11.447-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-30T11:00:11.477-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-30T11:00:11.484-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-30T11:00:11.507-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
+2025-01-30T11:00:11.509-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-30T11:00:11.514-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
+2025-01-30T11:00:11.519-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)

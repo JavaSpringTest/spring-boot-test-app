@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 @Service
 public class CuentaServiceImpl implements CuentaService {
@@ -21,6 +22,16 @@ public class CuentaServiceImpl implements CuentaService {
     ) {
         this.cuentaRepository = cuentaRepository;
         this.bancoRepository = bancoRepository;
+    }
+
+    @Override
+    public List<Cuenta> findAll() {
+        return this.cuentaRepository.findAll();
+    }
+
+    @Override
+    public Cuenta save(Cuenta cuenta) {
+        return null;
     }
 
     @Override
