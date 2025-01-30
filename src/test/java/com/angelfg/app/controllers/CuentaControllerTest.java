@@ -16,6 +16,8 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 import static com.angelfg.app.Datos.*;
 import static org.mockito.Mockito.*;
@@ -62,6 +64,8 @@ class CuentaControllerTest {
     @Test
     void testTransferir() throws Exception {
 
+        // Todo en mvc es autentico lo demas es simulado
+
         // Given
         TransaccionDto dto = new TransaccionDto();
         dto.setCuentaOrigenId(1L);
@@ -69,6 +73,17 @@ class CuentaControllerTest {
         dto.setMonto(new BigDecimal("100"));
         dto.setBancoId(1L);
 
+        System.out.println(this.objectMapper.writeValueAsString(dto));
+
+        Map<String, Object> response = new HashMap<>();
+        response.put("date", LocalDate.now().toString());
+        response.put("status", "OK");
+        response.put("mensaje", "Transferencia realizada con éxito");
+        response.put("transaccion", dto);
+
+        System.out.println(this.objectMapper.writeValueAsString(response));
+
+        // When
         mvc.perform(post("/api/cuentas/transferir")
             .contentType(MediaType.APPLICATION_JSON)
             .content(this.objectMapper.writeValueAsString(dto))
@@ -77,7 +92,8 @@ class CuentaControllerTest {
         .andExpect(content().contentType(MediaType.APPLICATION_JSON))
         .andExpect(jsonPath("$.date").value(LocalDate.now().toString()))
         .andExpect(jsonPath("$.mensaje").value("Transferencia realizada con éxito"))
-        .andExpect(jsonPath("$.transaccion.cuentaOrigenId").value(dto.getCuentaOrigenId()));
+        .andExpect(jsonPath("$.transaccion.cuentaOrigenId").value(dto.getCuentaOrigenId()))
+        .andExpect(content().json(this.objectMapper.writeValueAsString(response)));
 
     }
 
