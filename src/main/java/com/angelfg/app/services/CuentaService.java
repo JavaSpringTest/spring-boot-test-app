@@ -8,6 +8,7 @@ import java.util.List;
 public interface CuentaService {
     List<Cuenta> findAll();
     Cuenta save(Cuenta cuenta);
+    void deleteById(Long id);
     Cuenta findById(Long id);
     int revisarTotalTransferencias(Long bancoId);
     BigDecimal revisarSaldo(Long cuentaId);
