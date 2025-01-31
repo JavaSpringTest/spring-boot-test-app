@@ -163,3 +163,62 @@
 2025-01-31T15:39:28.647-06:00 DEBUG 33924 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
 2025-01-31T15:39:28.701-06:00 DEBUG 33924 --- [http-nio-auto-1-exec-4] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
 2025-01-31T15:39:28.718-06:00 DEBUG 33924 --- [http-nio-auto-1-exec-5] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:44:11.794-06:00 DEBUG 2668 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:44:11.917-06:00 DEBUG 2668 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:44:11.925-06:00 DEBUG 2668 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:44:14.993-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:44:15.032-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:44:15.033-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:44:15.048-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:44:15.052-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:44:15.053-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:44:15.172-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:44:15.191-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:44:15.251-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-4] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:44:15.270-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-5] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:44:15.299-06:00 DEBUG 2668 --- [http-nio-auto-1-exec-6] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-31T15:50:01.399-06:00 DEBUG 13732 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:50:01.533-06:00 DEBUG 13732 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:50:01.541-06:00 DEBUG 13732 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:50:04.619-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:50:04.651-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:50:04.652-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:50:04.666-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:50:04.670-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:50:04.670-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:50:04.773-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:50:04.790-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:50:04.845-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-4] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:50:04.860-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-5] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:50:04.887-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-6] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-31T15:50:04.906-06:00 DEBUG 13732 --- [http-nio-auto-1-exec-7] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-31T15:50:20.581-06:00 DEBUG 30708 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:50:20.711-06:00 DEBUG 30708 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:50:20.720-06:00 DEBUG 30708 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:50:23.803-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:50:23.834-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:50:23.836-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:50:23.851-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:50:23.855-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:50:23.855-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:50:23.959-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:50:23.977-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:50:24.029-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-4] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:50:24.045-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-5] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:50:24.073-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-8] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-31T15:50:24.094-06:00 DEBUG 30708 --- [http-nio-auto-1-exec-7] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-31T15:51:41.443-06:00 DEBUG 16484 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:51:41.569-06:00 DEBUG 16484 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:51:41.578-06:00 DEBUG 16484 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:51:44.700-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:51:44.733-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:51:44.734-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:51:44.749-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:51:44.753-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:51:44.754-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:51:44.862-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:51:44.879-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:51:44.929-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-4] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:51:44.946-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-5] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
+2025-01-31T15:51:44.972-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-6] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
+2025-01-31T15:51:44.996-06:00 DEBUG 16484 --- [http-nio-auto-1-exec-7] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
