@@ -1,117 +1,21 @@
-2025-01-30T09:41:44.506-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T09:41:44.757-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T09:41:44.768-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T09:41:46.048-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T09:41:46.053-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T09:41:46.057-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T09:41:47.154-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T09:41:47.225-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T09:41:47.252-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T09:41:47.280-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T09:41:47.286-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T09:41:47.310-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
-2025-01-30T09:41:47.313-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T09:41:47.319-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T09:41:47.326-06:00 DEBUG 5060 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T10:43:50.127-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T10:43:50.395-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T10:43:50.406-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T10:43:51.664-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T10:43:51.669-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T10:43:51.674-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T10:43:52.755-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T10:43:52.821-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T10:43:52.849-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T10:43:52.878-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T10:43:52.882-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T10:43:52.900-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
-2025-01-30T10:43:52.902-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T10:43:52.908-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T10:43:52.914-06:00 DEBUG 32432 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T10:54:45.434-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T10:54:45.712-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T10:54:45.722-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T10:54:47.169-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T10:54:47.174-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T10:54:47.178-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T10:54:48.317-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T10:54:48.390-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T10:54:48.417-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T10:54:48.445-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T10:54:48.451-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T10:54:48.471-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
-2025-01-30T10:54:48.473-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T10:54:48.480-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T10:54:48.486-06:00 DEBUG 9656 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T10:58:53.305-06:00 DEBUG 34680 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T10:58:53.434-06:00 DEBUG 34680 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T10:58:53.442-06:00 DEBUG 34680 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T10:59:15.749-06:00 DEBUG 19656 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T10:59:15.885-06:00 DEBUG 19656 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T10:59:15.893-06:00 DEBUG 19656 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T10:59:45.190-06:00 DEBUG 34776 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T10:59:45.321-06:00 DEBUG 34776 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T10:59:45.329-06:00 DEBUG 34776 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T11:00:08.665-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T11:00:08.924-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T11:00:08.934-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T11:00:10.230-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T11:00:10.236-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T11:00:10.240-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T11:00:11.337-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T11:00:11.407-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T11:00:11.447-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T11:00:11.477-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T11:00:11.484-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T11:00:11.507-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
-2025-01-30T11:00:11.509-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T11:00:11.514-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T11:00:11.519-06:00 DEBUG 12424 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T11:04:01.090-06:00 DEBUG 34436 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T11:04:01.229-06:00 DEBUG 34436 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T11:04:01.237-06:00 DEBUG 34436 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T11:04:24.066-06:00 DEBUG 29152 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T11:04:24.199-06:00 DEBUG 29152 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T11:04:24.208-06:00 DEBUG 29152 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T11:05:05.683-06:00 DEBUG 25656 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T11:05:05.813-06:00 DEBUG 25656 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T11:05:05.820-06:00 DEBUG 25656 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T11:05:30.644-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T11:05:30.897-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T11:05:30.908-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T11:05:32.265-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T11:05:32.271-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T11:05:32.275-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T11:05:33.432-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T11:05:33.503-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T11:05:33.530-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T11:05:33.559-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T11:05:33.574-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T11:05:33.592-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : delete from cuentas where id=?
-2025-01-30T11:05:33.594-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0
-2025-01-30T11:05:33.599-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.persona=?
-2025-01-30T11:05:33.609-06:00 DEBUG 16116 --- [main] org.hibernate.SQL                        : insert into cuentas (persona,saldo,id) values (?,?,default)
-2025-01-30T12:28:33.982-06:00 DEBUG 4048 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:28:34.110-06:00 DEBUG 4048 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:28:34.118-06:00 DEBUG 4048 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:29:10.548-06:00  INFO 20716 --- [main] c.angelfg.app.SpringBootTestApplication  : Starting SpringBootTestApplication using Java 17.0.13 with PID 20716 (C:\Users\user\Documents\spring_testing\spring-boot-test\target\classes started by user in C:\Users\user\Documents\spring_testing\spring-boot-test)
-2025-01-30T12:29:10.551-06:00  INFO 20716 --- [main] c.angelfg.app.SpringBootTestApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-01-30T12:29:11.237-06:00  INFO 20716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-30T12:29:11.297-06:00  INFO 20716 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 2 JPA repository interfaces.
-2025-01-30T12:29:11.812-06:00  INFO 20716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
-2025-01-30T12:29:11.825-06:00  INFO 20716 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-30T12:29:11.826-06:00  INFO 20716 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
-2025-01-30T12:29:11.889-06:00  INFO 20716 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-30T12:29:11.890-06:00  INFO 20716 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1292 ms
-2025-01-30T12:29:12.095-06:00  INFO 20716 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-30T12:29:12.157-06:00  INFO 20716 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
-2025-01-30T12:29:12.201-06:00  INFO 20716 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-30T12:29:12.474-06:00  INFO 20716 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-30T12:29:12.507-06:00  INFO 20716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-30T12:29:12.648-06:00  INFO 20716 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:app user=SA
-2025-01-30T12:29:12.650-06:00  INFO 20716 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-30T12:29:12.667-06:00  WARN 20716 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-01-30T12:29:12.688-06:00  INFO 20716 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-01-31T15:17:54.617-06:00  INFO 15108 --- [main] c.angelfg.app.SpringBootTestApplication  : Starting SpringBootTestApplication using Java 17.0.13 with PID 15108 (C:\Users\user\Documents\spring_testing\spring-boot-test\target\classes started by user in C:\Users\user\Documents\spring_testing\spring-boot-test)
+2025-01-31T15:17:54.623-06:00  INFO 15108 --- [main] c.angelfg.app.SpringBootTestApplication  : No active profile set, falling back to 1 default profile: "default"
+2025-01-31T15:17:55.322-06:00  INFO 15108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-31T15:17:55.384-06:00  INFO 15108 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 2 JPA repository interfaces.
+2025-01-31T15:17:55.933-06:00  INFO 15108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
+2025-01-31T15:17:55.948-06:00  INFO 15108 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-31T15:17:55.948-06:00  INFO 15108 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-31T15:17:56.017-06:00  INFO 15108 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-31T15:17:56.017-06:00  INFO 15108 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1349 ms
+2025-01-31T15:17:56.225-06:00  INFO 15108 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-31T15:17:56.317-06:00  INFO 15108 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-31T15:17:56.363-06:00  INFO 15108 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-31T15:17:56.635-06:00  INFO 15108 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-31T15:17:56.667-06:00  INFO 15108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-31T15:17:56.827-06:00  INFO 15108 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:app user=SA
+2025-01-31T15:17:56.829-06:00  INFO 15108 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-31T15:17:56.852-06:00  WARN 15108 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-31T15:17:56.873-06:00  INFO 15108 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -119,330 +23,92 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-01-30T12:29:13.250-06:00 DEBUG 20716 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:29:13.355-06:00  INFO 20716 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-30T12:29:13.377-06:00 DEBUG 20716 --- [main] org.hibernate.SQL                        : create table bancos (id bigint not null, nombre varchar(255), total_transferencias integer, primary key (id))
-2025-01-30T12:29:13.378-06:00 DEBUG 20716 --- [main] org.hibernate.SQL                        : create table cuentas (id bigint generated by default as identity, persona varchar(255), saldo numeric(38,2), primary key (id))
-2025-01-30T12:29:13.383-06:00 DEBUG 20716 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:29:13.385-06:00  INFO 20716 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-30T12:29:13.708-06:00  INFO 20716 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-01-30T12:29:14.585-06:00  INFO 20716 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-01-30T12:29:15.573-06:00  INFO 20716 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
-2025-01-30T12:29:15.585-06:00  INFO 20716 --- [main] c.angelfg.app.SpringBootTestApplication  : Started SpringBootTestApplication in 5.457 seconds (process running for 5.802)
-2025-01-30T12:29:27.330-06:00 DEBUG 31492 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:29:27.457-06:00 DEBUG 31492 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:29:27.465-06:00 DEBUG 31492 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:29:30.428-06:00  INFO 20716 --- [http-nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-01-30T12:29:30.428-06:00  INFO 20716 --- [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-01-30T12:29:30.429-06:00  INFO 20716 --- [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-01-30T12:29:30.534-06:00 DEBUG 20716 --- [http-nio-3030-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:29:30.555-06:00 ERROR 20716 --- [http-nio-3030-exec-1] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.NoSuchElementException: No value present] with root cause
-
-java.util.NoSuchElementException: No value present
-	at java.base/java.util.Optional.orElseThrow(Optional.java:377) ~[na:na]
-	at com.angelfg.app.services.CuentaServiceImpl.transferir(CuentaServiceImpl.java:67) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.1.jar:6.2.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.1.jar:6.2.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.1.jar:6.2.1]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.1.jar:6.2.1]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.1.jar:6.2.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.1.jar:6.2.1]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.1.jar:6.2.1]
-	at com.angelfg.app.services.CuentaServiceImpl$$SpringCGLIB$$0.transferir(<generated>) ~[classes/:na]
-	at com.angelfg.app.controllers.CuentaController.transferir(CuentaController.java:44) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.34.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
-
-2025-01-30T12:31:03.787-06:00 DEBUG 23192 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:31:03.916-06:00 DEBUG 23192 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:31:03.924-06:00 DEBUG 23192 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:31:06.725-06:00 DEBUG 20716 --- [http-nio-3030-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:31:06.727-06:00 ERROR 20716 --- [http-nio-3030-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: java.util.NoSuchElementException: No value present] with root cause
-
-java.util.NoSuchElementException: No value present
-	at java.base/java.util.Optional.orElseThrow(Optional.java:377) ~[na:na]
-	at com.angelfg.app.services.CuentaServiceImpl.transferir(CuentaServiceImpl.java:67) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.1.jar:6.2.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.1.jar:6.2.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.1.jar:6.2.1]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.1.jar:6.2.1]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.1.jar:6.2.1]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.1.jar:6.2.1]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:727) ~[spring-aop-6.2.1.jar:6.2.1]
-	at com.angelfg.app.services.CuentaServiceImpl$$SpringCGLIB$$0.transferir(<generated>) ~[classes/:na]
-	at com.angelfg.app.controllers.CuentaController.transferir(CuentaController.java:44) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:569) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:257) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:190) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.34.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.1.jar:6.2.1]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.34.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.1.jar:6.2.1]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.34.jar:10.1.34]
-	at java.base/java.lang.Thread.run(Thread.java:840) ~[na:na]
-
-2025-01-30T12:33:28.040-06:00  INFO 20716 --- [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-01-30T12:33:28.204-06:00  INFO 20716 --- [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-01-30T12:33:28.206-06:00  INFO 20716 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-01-30T12:33:28.208-06:00  INFO 20716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-30T12:33:28.210-06:00  INFO 20716 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-30T12:33:42.595-06:00  INFO 10100 --- [main] c.angelfg.app.SpringBootTestApplication  : Starting SpringBootTestApplication using Java 17.0.13 with PID 10100 (C:\Users\user\Documents\spring_testing\spring-boot-test\target\classes started by user in C:\Users\user\Documents\spring_testing\spring-boot-test)
-2025-01-30T12:33:42.597-06:00  INFO 10100 --- [main] c.angelfg.app.SpringBootTestApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-01-30T12:33:43.252-06:00  INFO 10100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-30T12:33:43.307-06:00  INFO 10100 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 2 JPA repository interfaces.
-2025-01-30T12:33:43.792-06:00  INFO 10100 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
-2025-01-30T12:33:43.807-06:00  INFO 10100 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-30T12:33:43.807-06:00  INFO 10100 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
-2025-01-30T12:33:43.873-06:00  INFO 10100 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-30T12:33:43.873-06:00  INFO 10100 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1229 ms
-2025-01-30T12:33:43.981-06:00  INFO 10100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-30T12:33:44.145-06:00  INFO 10100 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:app user=SA
-2025-01-30T12:33:44.147-06:00  INFO 10100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-30T12:33:44.167-06:00  WARN 10100 --- [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [C:\Users\user\Documents\spring_testing\spring-boot-test\target\classes\data.sql]: INSERT INTO cuentas (persona, saldo) VALUES ('Luis', 1000)
-2025-01-30T12:33:44.167-06:00  INFO 10100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-01-30T12:33:44.169-06:00  INFO 10100 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-01-30T12:33:44.172-06:00  INFO 10100 --- [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-01-30T12:33:44.182-06:00  INFO 10100 --- [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-01-30T12:33:44.196-06:00 ERROR 10100 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Failed to initialize dependency 'dataSourceScriptDatabaseInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [C:\Users\user\Documents\spring_testing\spring-boot-test\target\classes\data.sql]: INSERT INTO cuentas (persona, saldo) VALUES ('Luis', 1000)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:325) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.1.jar:6.2.1]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
-	at com.angelfg.app.SpringBootTestApplication.main(SpringBootTestApplication.java:10) ~[classes/:na]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Failed to execute SQL script statement #1 of file [C:\Users\user\Documents\spring_testing\spring-boot-test\target\classes\data.sql]: INSERT INTO cuentas (persona, saldo) VALUES ('Luis', 1000)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:312) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 10 common frames omitted
-Caused by: org.springframework.jdbc.datasource.init.ScriptStatementFailedException: Failed to execute SQL script statement #1 of file [C:\Users\user\Documents\spring_testing\spring-boot-test\target\classes\data.sql]: INSERT INTO cuentas (persona, saldo) VALUES ('Luis', 1000)
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:282) ~[spring-jdbc-6.2.1.jar:6.2.1]
-	at org.springframework.jdbc.datasource.init.ResourceDatabasePopulator.populate(ResourceDatabasePopulator.java:254) ~[spring-jdbc-6.2.1.jar:6.2.1]
-	at org.springframework.jdbc.datasource.init.DatabasePopulatorUtils.execute(DatabasePopulatorUtils.java:54) ~[spring-jdbc-6.2.1.jar:6.2.1]
-	at org.springframework.boot.jdbc.init.DataSourceScriptDatabaseInitializer.runScripts(DataSourceScriptDatabaseInitializer.java:87) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.runScripts(AbstractScriptDatabaseInitializer.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyScripts(AbstractScriptDatabaseInitializer.java:108) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.applyDataScripts(AbstractScriptDatabaseInitializer.java:102) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.initializeDatabase(AbstractScriptDatabaseInitializer.java:77) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.boot.sql.init.AbstractScriptDatabaseInitializer.afterPropertiesSet(AbstractScriptDatabaseInitializer.java:66) ~[spring-boot-3.4.1.jar:3.4.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-6.2.1.jar:6.2.1]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-6.2.1.jar:6.2.1]
-	... 17 common frames omitted
-Caused by: org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "CUENTAS" not found (this database is empty); SQL statement:
-INSERT INTO cuentas (persona, saldo) VALUES ('Luis', 1000) [42104-232]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.message.DbException.get(DbException.java:223) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.message.DbException.get(DbException.java:199) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7932) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.getTableOrViewNotFoundDbException(Parser.java:7916) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.readTableOrView(Parser.java:7895) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.readTableOrView(Parser.java:7857) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.parseInsert(Parser.java:1521) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.parsePrepared(Parser.java:698) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.parse(Parser.java:581) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.parse(Parser.java:556) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.command.Parser.prepareCommand(Parser.java:484) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:645) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:561) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1164) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:245) ~[h2-2.3.232.jar:2.3.232]
-	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:231) ~[h2-2.3.232.jar:2.3.232]
-	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
-	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
-	at org.springframework.jdbc.datasource.init.ScriptUtils.executeSqlScript(ScriptUtils.java:261) ~[spring-jdbc-6.2.1.jar:6.2.1]
-	... 27 common frames omitted
-
-2025-01-30T12:34:06.770-06:00  INFO 21692 --- [main] c.angelfg.app.SpringBootTestApplication  : Starting SpringBootTestApplication using Java 17.0.13 with PID 21692 (C:\Users\user\Documents\spring_testing\spring-boot-test\target\classes started by user in C:\Users\user\Documents\spring_testing\spring-boot-test)
-2025-01-30T12:34:06.772-06:00  INFO 21692 --- [main] c.angelfg.app.SpringBootTestApplication  : No active profile set, falling back to 1 default profile: "default"
-2025-01-30T12:34:07.449-06:00  INFO 21692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-01-30T12:34:07.503-06:00  INFO 21692 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 2 JPA repository interfaces.
-2025-01-30T12:34:08.007-06:00  INFO 21692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 3030 (http)
-2025-01-30T12:34:08.022-06:00  INFO 21692 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-01-30T12:34:08.022-06:00  INFO 21692 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
-2025-01-30T12:34:08.089-06:00  INFO 21692 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-01-30T12:34:08.089-06:00  INFO 21692 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1273 ms
-2025-01-30T12:34:08.183-06:00  INFO 21692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-01-30T12:34:08.348-06:00  INFO 21692 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:app user=SA
-2025-01-30T12:34:08.350-06:00  INFO 21692 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-01-30T12:34:08.460-06:00  INFO 21692 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-01-30T12:34:08.533-06:00  INFO 21692 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
-2025-01-30T12:34:08.574-06:00  INFO 21692 --- [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-01-30T12:34:08.912-06:00  INFO 21692 --- [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-01-30T12:34:08.961-06:00  WARN 21692 --- [main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-01-30T12:34:08.977-06:00  INFO 21692 --- [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 2.3.232
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2025-01-30T12:34:09.537-06:00 DEBUG 21692 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:34:09.629-06:00  INFO 21692 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-01-30T12:34:09.648-06:00 DEBUG 21692 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:34:09.655-06:00 DEBUG 21692 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:34:09.657-06:00  INFO 21692 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-01-30T12:34:09.856-06:00  INFO 21692 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-01-30T12:34:10.589-06:00  INFO 21692 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-01-30T12:34:11.547-06:00  INFO 21692 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
-2025-01-30T12:34:11.559-06:00  INFO 21692 --- [main] c.angelfg.app.SpringBootTestApplication  : Started SpringBootTestApplication in 5.19 seconds (process running for 5.485)
-2025-01-30T12:35:46.306-06:00 DEBUG 20404 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:35:46.430-06:00 DEBUG 20404 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:35:46.438-06:00 DEBUG 20404 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:35:49.284-06:00  INFO 21692 --- [http-nio-3030-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-01-30T12:35:49.284-06:00  INFO 21692 --- [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-01-30T12:35:49.285-06:00  INFO 21692 --- [http-nio-3030-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-01-30T12:35:49.389-06:00 DEBUG 21692 --- [http-nio-3030-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:35:49.418-06:00 DEBUG 21692 --- [http-nio-3030-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:35:49.419-06:00 DEBUG 21692 --- [http-nio-3030-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
-2025-01-30T12:35:49.435-06:00 DEBUG 21692 --- [http-nio-3030-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:35:49.439-06:00 DEBUG 21692 --- [http-nio-3030-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:35:49.439-06:00 DEBUG 21692 --- [http-nio-3030-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
-2025-01-30T12:38:49.404-06:00 DEBUG 14860 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:38:49.530-06:00 DEBUG 14860 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:38:49.537-06:00 DEBUG 14860 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:38:52.376-06:00 DEBUG 21692 --- [http-nio-3030-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:38:52.377-06:00 DEBUG 21692 --- [http-nio-3030-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:38:52.377-06:00 DEBUG 21692 --- [http-nio-3030-exec-3] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
-2025-01-30T12:38:52.378-06:00 DEBUG 21692 --- [http-nio-3030-exec-3] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:38:52.378-06:00 DEBUG 21692 --- [http-nio-3030-exec-3] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:38:52.379-06:00 DEBUG 21692 --- [http-nio-3030-exec-3] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
-2025-01-30T12:44:16.645-06:00 DEBUG 7280 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:44:16.770-06:00 DEBUG 7280 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:44:16.778-06:00 DEBUG 7280 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:44:19.771-06:00 DEBUG 7280 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:44:19.801-06:00 DEBUG 7280 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:44:19.802-06:00 DEBUG 7280 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
-2025-01-30T12:44:19.816-06:00 DEBUG 7280 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:44:19.820-06:00 DEBUG 7280 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:44:19.820-06:00 DEBUG 7280 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
-2025-01-30T12:50:43.299-06:00 DEBUG 28868 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:50:43.428-06:00 DEBUG 28868 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:50:43.436-06:00 DEBUG 28868 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:50:46.506-06:00 DEBUG 28868 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:50:46.538-06:00 DEBUG 28868 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:50:46.539-06:00 DEBUG 28868 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
-2025-01-30T12:50:46.556-06:00 DEBUG 28868 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:50:46.560-06:00 DEBUG 28868 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:50:46.561-06:00 DEBUG 28868 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
-2025-01-30T12:54:28.872-06:00 DEBUG 17644 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
-2025-01-30T12:54:28.999-06:00 DEBUG 17644 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
-2025-01-30T12:54:29.009-06:00 DEBUG 17644 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
-2025-01-30T12:54:32.094-06:00 DEBUG 17644 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:54:32.130-06:00 DEBUG 17644 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
-2025-01-30T12:54:32.131-06:00 DEBUG 17644 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
-2025-01-30T12:54:32.146-06:00 DEBUG 17644 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:54:32.151-06:00 DEBUG 17644 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
-2025-01-30T12:54:32.151-06:00 DEBUG 17644 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:17:57.476-06:00 DEBUG 15108 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:17:57.578-06:00  INFO 15108 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-31T15:17:57.598-06:00 DEBUG 15108 --- [main] org.hibernate.SQL                        : create table bancos (id bigint not null, nombre varchar(255), total_transferencias integer, primary key (id))
+2025-01-31T15:17:57.599-06:00 DEBUG 15108 --- [main] org.hibernate.SQL                        : create table cuentas (id bigint generated by default as identity, persona varchar(255), saldo numeric(38,2), primary key (id))
+2025-01-31T15:17:57.604-06:00 DEBUG 15108 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:17:57.606-06:00  INFO 15108 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-31T15:17:57.949-06:00  INFO 15108 --- [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-01-31T15:17:58.797-06:00  INFO 15108 --- [main] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-01-31T15:17:59.755-06:00  INFO 15108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 3030 (http) with context path '/'
+2025-01-31T15:17:59.767-06:00  INFO 15108 --- [main] c.angelfg.app.SpringBootTestApplication  : Started SpringBootTestApplication in 5.599 seconds (process running for 6.001)
+2025-01-31T15:18:14.758-06:00 DEBUG 10048 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:18:14.880-06:00 DEBUG 10048 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:18:14.888-06:00 DEBUG 10048 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:18:17.900-06:00 DEBUG 10048 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:18:17.933-06:00 DEBUG 10048 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:18:17.934-06:00 DEBUG 10048 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:18:17.949-06:00 DEBUG 10048 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:18:17.953-06:00 DEBUG 10048 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:18:17.954-06:00 DEBUG 10048 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:21:04.289-06:00 DEBUG 19248 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:21:04.414-06:00 DEBUG 19248 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:21:04.421-06:00 DEBUG 19248 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:21:07.558-06:00 DEBUG 19248 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:21:07.590-06:00 DEBUG 19248 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:21:07.591-06:00 DEBUG 19248 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:21:07.608-06:00 DEBUG 19248 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:21:07.613-06:00 DEBUG 19248 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:21:07.614-06:00 DEBUG 19248 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:21:45.844-06:00 DEBUG 32132 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:21:45.981-06:00 DEBUG 32132 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:21:45.990-06:00 DEBUG 32132 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:22:29.619-06:00 DEBUG 18488 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:22:29.741-06:00 DEBUG 18488 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:22:29.748-06:00 DEBUG 18488 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:22:32.640-06:00 DEBUG 18488 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:22:43.138-06:00 DEBUG 25180 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:22:43.271-06:00 DEBUG 25180 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:22:43.278-06:00 DEBUG 25180 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:22:46.363-06:00 DEBUG 25180 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:22:46.549-06:00 DEBUG 25180 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:22:46.556-06:00 DEBUG 25180 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:22:46.557-06:00 DEBUG 25180 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:22:46.575-06:00 DEBUG 25180 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:22:46.579-06:00 DEBUG 25180 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:22:46.580-06:00 DEBUG 25180 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:24:25.830-06:00 DEBUG 1236 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:24:25.954-06:00 DEBUG 1236 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:24:25.962-06:00 DEBUG 1236 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:24:28.936-06:00 DEBUG 1236 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:24:29.093-06:00 DEBUG 1236 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:24:29.135-06:00 DEBUG 1236 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:24:29.142-06:00 DEBUG 1236 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:24:29.144-06:00 DEBUG 1236 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:24:29.160-06:00 DEBUG 1236 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:24:29.166-06:00 DEBUG 1236 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:24:29.167-06:00 DEBUG 1236 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:26:54.379-06:00 DEBUG 9908 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:26:54.510-06:00 DEBUG 9908 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:26:54.518-06:00 DEBUG 9908 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:26:57.626-06:00 DEBUG 9908 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:26:57.660-06:00 DEBUG 9908 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:26:57.661-06:00 DEBUG 9908 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:26:57.676-06:00 DEBUG 9908 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:26:57.680-06:00 DEBUG 9908 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:26:57.681-06:00 DEBUG 9908 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:26:57.787-06:00 DEBUG 9908 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:26:57.809-06:00 DEBUG 9908 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:27:41.166-06:00 DEBUG 10140 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:27:41.290-06:00 DEBUG 10140 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:27:41.297-06:00 DEBUG 10140 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:27:44.353-06:00 DEBUG 10140 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:27:44.386-06:00 DEBUG 10140 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:27:44.387-06:00 DEBUG 10140 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:27:44.402-06:00 DEBUG 10140 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:27:44.407-06:00 DEBUG 10140 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:27:44.407-06:00 DEBUG 10140 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:27:44.515-06:00 DEBUG 10140 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:27:44.531-06:00 DEBUG 10140 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:29:08.006-06:00 DEBUG 33096 --- [main] org.hibernate.SQL                        : create global temporary table HTE_bancos(rn_ integer not null, total_transferencias integer, id bigint, nombre varchar(255), primary key (rn_)) TRANSACTIONAL
+2025-01-31T15:29:08.130-06:00 DEBUG 33096 --- [main] org.hibernate.SQL                        : alter table if exists cuentas alter column saldo set data type numeric(38,2)
+2025-01-31T15:29:08.138-06:00 DEBUG 33096 --- [main] org.hibernate.SQL                        : create sequence bancos_seq start with 1 increment by 50
+2025-01-31T15:29:11.318-06:00 DEBUG 33096 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:29:11.355-06:00 DEBUG 33096 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:29:11.357-06:00 DEBUG 33096 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : select b1_0.id,b1_0.nombre,b1_0.total_transferencias from bancos b1_0 where b1_0.id=?
+2025-01-31T15:29:11.372-06:00 DEBUG 33096 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:29:11.376-06:00 DEBUG 33096 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update cuentas set persona=?,saldo=? where id=?
+2025-01-31T15:29:11.377-06:00 DEBUG 33096 --- [http-nio-auto-1-exec-1] org.hibernate.SQL                        : update bancos set nombre=?,total_transferencias=? where id=?
+2025-01-31T15:29:11.480-06:00 DEBUG 33096 --- [http-nio-auto-1-exec-2] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
+2025-01-31T15:29:11.499-06:00 DEBUG 33096 --- [http-nio-auto-1-exec-3] org.hibernate.SQL                        : select c1_0.id,c1_0.persona,c1_0.saldo from cuentas c1_0 where c1_0.id=?
