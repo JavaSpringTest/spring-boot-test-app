@@ -22,6 +22,7 @@ import static org.hamcrest.Matchers.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("integracion_wc")
 // PRUEBAS DE INTEGRACION
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) // Para poner ordenes en los test (Cual se ejecuta primero, etc)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)

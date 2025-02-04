@@ -2,6 +2,7 @@ package com.angelfg.app;
 
 import com.angelfg.app.models.Cuenta;
 import com.angelfg.app.repositories.CuentaRepository;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -13,6 +14,7 @@ import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("integracion_jpa")
 @DataJpaTest // Habilita los test para el repository
 public class IntegracionJpaTest {
     

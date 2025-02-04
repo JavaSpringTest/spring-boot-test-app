@@ -24,6 +24,8 @@ import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+// Excluir en terminal con maven  ./mvnw -Dgroups="!integracion_rt"
+@Tag("integracion_rt")
 @TestMethodOrder(MethodOrderer.OrderAnnotation.class) // Para poner ordenes en los test (Cual se ejecuta primero, etc)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 class CuentaControllerTestRestTemplateTest {
