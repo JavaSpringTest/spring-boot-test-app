@@ -1,6 +1,8 @@
 package com.angelfg.app.controllers;
 
 import com.angelfg.app.models.TransaccionDto;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +14,9 @@ import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.util.HashMap;
+import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -34,7 +39,7 @@ class CuentaControllerTestRestTemplateTest {
 
     @Test
     @Order(1)
-    void testTransferir() {
+    void testTransferir() throws JsonProcessingException {
 
         TransaccionDto dto = new TransaccionDto();
         dto.setMonto(new BigDecimal("100"));
@@ -47,12 +52,6 @@ class CuentaControllerTestRestTemplateTest {
 
         System.out.println("PUERTO: " + puerto);
 
-//        Map<String, Object> response = new HashMap<>();
-//        response.put("date", LocalDate.now().toString());
-//        response.put("status", "OK");
-//        response.put("mensaje", "Transferencia realizada con éxito");
-//        response.put("transaccion", dto);
-
         String json = response.getBody();
         System.out.println("JSON: " + json);
 
@@ -62,6 +61,19 @@ class CuentaControllerTestRestTemplateTest {
         assertTrue(json.contains("Transferencia realizada con éxito"));
         assertTrue(json.contains("{\"cuentaOrigenId\":1,\"cuentaDestinoId\":2,\"monto\":100,\"bancoId\":1}"));
 
+        JsonNode jsonNode = this.objectMapper.readTree(json);
+        assertEquals("Transferencia realizada con éxito", jsonNode.path("mensaje").asText());
+        assertEquals(LocalDate.now().toString(), jsonNode.path("date").asText());
+        assertEquals("100", jsonNode.path("transaccion").path("monto").asText());
+        assertEquals(1L, jsonNode.path("transaccion").path("cuentaOrigenId").asLong());
+
+        Map<String, Object> response2 = new HashMap<>();
+        response2.put("date", LocalDate.now().toString());
+        response2.put("status", "OK");
+        response2.put("mensaje", "Transferencia realizada con éxito");
+        response2.put("transaccion", dto);
+
+        assertEquals(this.objectMapper.writeValueAsString(response2), json);
     }
 
     private String crearUrl(String uri) {
