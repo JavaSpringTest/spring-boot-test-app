@@ -1,5 +1,6 @@
 package com.angelfg.app.controllers;
 
+import com.angelfg.app.models.Cuenta;
 import com.angelfg.app.models.TransaccionDto;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -74,6 +75,23 @@ class CuentaControllerTestRestTemplateTest {
         response2.put("transaccion", dto);
 
         assertEquals(this.objectMapper.writeValueAsString(response2), json);
+    }
+
+    @Test
+    @Order(2)
+    void testDetalle() {
+
+        ResponseEntity<Cuenta> respuesta = client.getForEntity(crearUrl("/api/cuentas/1"), Cuenta.class);
+        Cuenta cuenta = respuesta.getBody();
+
+        assertEquals(HttpStatus.OK, respuesta.getStatusCode());
+        assertEquals(MediaType.APPLICATION_JSON, respuesta.getHeaders().getContentType());
+
+        assertNotNull(cuenta);
+        assertEquals(1L, cuenta.getId());
+        assertEquals("Luis", cuenta.getPersona());
+        assertEquals("900.00", cuenta.getSaldo().toPlainString());
+        assertEquals(new Cuenta(1L, "Luis", new BigDecimal("900.00")), cuenta);
     }
 
     private String crearUrl(String uri) {
